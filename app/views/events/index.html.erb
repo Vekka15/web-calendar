@@ -1,0 +1,12 @@
+
+<%=link_to("new", new_event_path,remote: true) %>
+<div id="events">
+  <% @events.each do |e| %>
+    Name: <%= e.name %> <br>
+    Desc: <%= e.description %> <br>
+  <%end%>
+</div>
+
+<div id="event_new">
+
+</div>
