@@ -1,5 +1,5 @@
-
-<!-- <%=link_to("new", new_event_path,remote: true) %>
+<div id="count"> </div>
+<%=link_to("new", new_event_path,remote: true) %>
 <div id="events">
   <% @events.each do |e| %>
     Name: <%= e.name %> <br>
@@ -9,6 +9,6 @@
 
 <div id="event_new">
 
-</div> -->
+</div>
 
-<%= react_component 'Events', { data: @events } %>
+<!-- <%= react_component 'Events', { data: @events } %> -->

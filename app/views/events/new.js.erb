@@ -1,3 +1,11 @@
+// tutaj wszystkie funkcje dotyczące new
 $(document).ready(function(){
-  $('.event_new').html("<%= j render partial: 'new.js.coffee' %>");
+    if($('#event_new').is(':visible')){
+      $('#event_new').html("<%= j render partial: 'new.html.erb'%>");
+    }else{
+      $('#event_new').show();
+    }
+    $('#button').click(function() {
+      $('#event_new').hide();
+    });
 });

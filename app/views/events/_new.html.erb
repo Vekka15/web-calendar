@@ -1,5 +1,6 @@
+<div id="button"> X </div>
 <%= form_for @event do |e| %>
-  <%= e.label :name %>
+  <%= e.label :name, class: 'test' %>
   <%= e.text_field :name %><br>
 
   <%= e.label :description %>

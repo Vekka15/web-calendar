@@ -3,10 +3,10 @@
       events: @props.data
     getDefaultProps: ->
       events: []
-    addRecord: (record) ->
-      records = @state.records.slice()
-      records.push record
-      @setState records: records
+    addEvent: (event) ->
+      events = @state.events.slice()
+      events.push event
+      @setState events: events
     render: ->
 
       React.DOM.div
@@ -18,7 +18,7 @@
         React.DOM.h2
           className: 'title'
           'Events'
-        React.createElement EventForm, handleNewRecord: @addRecord
+        React.createElement EventForm, handleNewEvent: @addEvent
         React.DOM.table
           className: 'table table-bordered'
           React.DOM.thead null,
