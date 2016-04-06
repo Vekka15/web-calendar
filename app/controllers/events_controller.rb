@@ -2,6 +2,9 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    respond_to do |format|
+      format.html
+    end
   end
 
   def new
@@ -10,9 +13,12 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.save
     respond_to do |format|
-      format.html { redirect_to root_path }
+      if @event.save
+        format.html { redirect_to root_path }
+      else
+        format.html { render 'index'}
+      end
     end
   end
 
